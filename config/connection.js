@@ -6,6 +6,7 @@ var connection;
 if (process.env.JAWSDB_URL) {
     // connection = mysql.createConnection(process.env.JAWSDB_URL);
     connection = mysql.createConnection({
+        port: 3306,
         host: 'l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         user: 'bvos70b8raxzvzvc',
         password: 'tgfj6ivlbnv4k172',
