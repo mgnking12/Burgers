@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/mgnking12/burgers.git"
+        "url": "https://github.com/mgnking12/burgers.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/mgnking12/burgers/issues"
     },
-    "homepage": "https://github.com/mgnking12/burgers#readme",
+    "homepage": "https://github.com/mgnking12/burgers.git",
     "dependencies": {
         "body-parser": "^1.15.2",
         "express": "^4.14.0",
