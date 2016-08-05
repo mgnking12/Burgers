@@ -3,7 +3,14 @@ Here is where you make the connection to the database and export and used by the
 */
 var mysql = require('mysql');
 
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+var connection = mysql.createConnection({
+    port: 3306,
+    host: 'gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'hh6ktphrm7zqrc1t',
+    password: 'wm0h14p49pj2kfwt',
+    database: 'mt73gsjv5w8sw8oq'
+});
 
 // var connection = mysql.createConnection({
 //     port: 3306,
