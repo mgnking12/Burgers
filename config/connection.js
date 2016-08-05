@@ -1,30 +1,21 @@
+/*
+Here is where you make the connection to the database and export and used by the O.R.M.
+*/
 var mysql = require('mysql');
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+var connection = mysql.createConnection({
+    port: 3306,
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'cat_db'
+});
 
-if (process.env.JAWSDB_URL) {
-    // connection = mysql.createConnection(process.env.JAWSDB_URL);
-    connection = mysql.createConnection({
-        port: 3306,
-        host: 'gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        user: 'foywabjkwudkjdlb',
-        password: 'svmstfvicef4obe3',
-        database: 'buhsre8sxi7nltel'
-    });
-} else {
-    connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'burgers_db'
-    });
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
     }
+    console.log('connected as id ' + connection.threadId);
+});
 
-    connection.connect(function(err) {
-        if (err) {
-            console.error('error connecting: ' + err.stack);
-            return;
-        }
-        console.log('connected as id ' + connection.threadId);
-    });
-
-    module.exports = connection;
+module.exports = connection;

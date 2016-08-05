@@ -1,82 +1,19 @@
-body {
-    background-color: #ccc;
+li {
+  background: #FAEBD7;
+  margin: 5px;
+  padding: 5px;
 }
 
-.krustPic1 {
-    padding: 10px;
-    width: 30%;
-    margin: 0 auto;
+.label {
+  font-weight: bold;
 }
 
-.krustPic {
-    padding: 10px;
-    width: 50%;
-    margin: 0 auto;
+.create-update-form {
+  background: aqua;
+  margin: 5px;
+  padding: 5px;
 }
 
-.img-responsive {
-    margin: 0 auto;
-}
-
-.tabTtitle {
-    background-color: #FF530D;
-    color: #FFD738;
-}
-
-.middle {
-    margin: 50px;
-}
-
-.menu {
-    background-color: #767982;
-    border: 12px solid #FFD738;
-    color: white;
-    width: 40%;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-.table {
-    border: 12px solid #FFD738;
-    background-color: #4B4B4C;
-    color: white;
-    width: 40%;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-.leftside {
-    float: left;
-}
-
-.rightside {
-    float: right;
-}
-
-.addBurger {
-    clear: both;
-    margin-top: 20px;
-}
-
-ul {
-    list-style-type: none;
-    font-size: 20px;
-    margin: auto;
-}
-
-.btn {
-    box-shadow: 1px 1px 2px #000;
-    margin: 5px 15px 10px 5px;
-}
-
-.eachBurger {
-    color: maroon;
-    margin: 10% 18%;
-    background-color: #fff;
-    width: 200px;
-    /*border-style: solid;
-    border-width: 5px;*/
-    box-shadow: 2px 2px 5px #000;
-    ;
-    /*border-color: #E8910C;*/
+.form-group {
+  margin-bottom: 5px;
 }
