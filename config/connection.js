@@ -12,13 +12,6 @@ var connection = mysql.createConnection({
     database: 'mt73gsjv5w8sw8oq'
 });
 
-// var connection = mysql.createConnection({
-//     port: 3306,
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'burgs_db'
-// });
 
 connection.connect(function(err) {
     if (err) {
