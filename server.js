@@ -9,7 +9,7 @@ var methodOverride = require('method-override')
 
 var app = express();
 
-//Serve static content for the app from the "public" directory in the application directory.
+//Serve static content for the app from the "public" directory in the appliburgion directory.
 app.use(express.static(process.cwd() + '/public'));
 
 app.use(bodyParser.urlencoded({
@@ -23,9 +23,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-var routes = require('./controllers/cats_controller.js');
+var routes = require('./controllers/burgs_controller.js');
 app.use('/', routes);
-
 
 var port = 3000;
 app.listen(port);

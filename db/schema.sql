@@ -1,12 +1,12 @@
 ### Schema
 
-CREATE DATABASE cat_db;
-USE cat_db;
+CREATE DATABASE burgs_db;
+USE burgs_db;
 
-CREATE TABLE cats
+CREATE TABLE burgs
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
+	devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );

@@ -3,34 +3,46 @@ Here is where you create all the functions that will do the routing for your app
 */
 var express = require('express');
 var router = express.Router();
-var cat = require('../models/cat.js');
+var burg = require('../models/burg.js');
 
-router.get('/', function(req,res) {
-	res.redirect('/cats')
+router.get('/', function(req, res) {
+    res.redirect('/burgs')
 });
 
-router.get('/cats', function(req,res) {
-	cat.all(function(data){
-		var hbsObject = {cats : data}
-		console.log(hbsObject)
-		res.render('index', hbsObject);
-	});
+router.get('/burgs', function(req, res) {
+    burg.all(function(data) {
+        var hbsObject = {
+            burgs: data
+        }
+        console.log(hbsObject)
+        res.render('index', hbsObject);
+    });
 });
 
-router.post('/cats/create', function(req,res) {
-	cat.create(['name', 'sleepy'], [req.body.name, req.body.sleepy], function(data){
-		res.redirect('/cats')
-	});
+router.post('/burgs/create', function(req, res) {
+    burg.create(['name', 'devoured'], [req.body.name, req.body.devoured], function(data) {
+        res.redirect('/burgs')
+    });
 });
 
-router.put('/cats/update/:id', function(req,res) {
-	var condition = 'id = ' + req.params.id;
+router.put('/burgs/update/:id', function(req, res) {
+    var condition = 'id = ' + req.params.id;
 
-	console.log('condition', condition);
+    console.log('condition', condition);
 
-	cat.update({'sleepy' : req.body.sleepy}, condition, function(data){
-		res.redirect('/cats');
-	});
+    burg.update({
+        'devoured': req.body.devoured
+    }, condition, function(data) {
+        res.redirect('/burgs');
+    });
+});
+
+router.delete('/burgs/delete/:id', function(req, res) {
+    var condition = 'id = ' + req.params.id;
+
+    burg.delete(condition, function(data) {
+        res.redirect('/burgs');
+    });
 });
 
 module.exports = router;
